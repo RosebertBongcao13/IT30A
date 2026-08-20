@@ -18,7 +18,7 @@ mysqldump -u root -p --databases library_db > "E:\Dev\it30a-BONGCAO\backups\%dat
 ALTER TABLE students ADD COLUMN stduent_created_at TIMESTAMP NULL DEFAULT NULL;
 UPDATE students SET stduent_created_at = CURRENT_TIMESTAMP WHERE stduent_created_at IS NULL;
 ALTER TABLE students MODIFY COLUMN stduent_created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
-
+//dsayidgsa
 
 
 
