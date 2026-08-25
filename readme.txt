@@ -13,7 +13,11 @@ source E:\Dev\it30a-BONGCAO\backups\08182026_library_db.sql
 
 mysqldump -u root -p --databases library_db > E:\Dev\it30a-BONGCAO\backups\08182026_library_db.sql 
 
+
 mysqldump -u root -p --databases library_db > E:\Dev\it30a-BONGCAO\backups\%date:~-4%_%date:~4,2%_%date:~7,2%_%time:~0,2%_%time:~3,2%_%time:~6,2%_library_db.sql
+
+mysqldump -u root -p --databases library_db > "E:\Dev\it30a-BONGCAO\backups\%date:~-4%_%date:~4,2%_%date:~7,2%_%time:~0,2%_%time:~3,2%_%time:~6,2%_library_db.sql"
+
 
 ALTER TABLE students ADD COLUMN stduent_created_at TIMESTAMP NULL DEFAULT NULL;
 UPDATE students SET stduent_created_at = CURRENT_TIMESTAMP WHERE stduent_created_at IS NULL;
