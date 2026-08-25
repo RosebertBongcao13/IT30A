@@ -9,4 +9,4 @@ book category VARCHAR(50) NOT NULL,
 book created at TIMESTAMP NOT NULL DEFAULT CURRENT TIMESTAMP
 );
 
- 
+  

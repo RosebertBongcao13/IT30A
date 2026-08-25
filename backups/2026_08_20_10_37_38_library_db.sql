@@ -22,7 +22,7 @@
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `library_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 
 USE `library_db`;
-
+ 
 --
 -- Table structure for table `students`
 --
