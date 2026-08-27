@@ -66,3 +66,5 @@ WHERE borrow_id = 4 AND borrow_return_date IS NULL;
 
             WHERE br.borrow_return_date is NOT NULL
             ORDER BY br.borrow_date DESC;
+
+          .....
