@@ -1,0 +1,12 @@
+CREATE TABLE books (
+2
+book id INT AUTO INCREMENT PRIMARY KEY,
+T
+book title VARCHAR(S) NOT NULL,
+5
+book author VARCHAR(100) NOT NULL.
+book category VARCHAR(50) NOT NULL,
+book created at TIMESTAMP NOT NULL DEFAULT CURRENT TIMESTAMP
+);
+
+  
