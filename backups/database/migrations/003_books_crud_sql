@@ -50,3 +50,6 @@ UPDATE books
     SET book_title = 'The Book Thief',
         book_author = 'Markus Zusak'
     WHERE book_id = 1;
+
+    --commit
+    
