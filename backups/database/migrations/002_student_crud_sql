@@ -38,14 +38,14 @@ FROM students
 FROM students
     ORDER BY student_first_name DESC;    
 
---student Query #7 Select students with specific id number
+--student Query #8 Select students with specific id number
  SELECT * FROM students
     student_first_name
     student_last_name
 FROM students
     WHERE student_id = 1;
     LIMIT 1;
-
+--9
 UPDATE students
     SET student_first_name = 'ROSEBERT',
         student_last_name = 'BONGCAO',

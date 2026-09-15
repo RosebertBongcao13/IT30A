@@ -1,0 +1,52 @@
+ --1
+SELECT * FROM books;
+ 
+--2
+SELECT * FROM books
+    ORDER BY book_id ASC;
+
+--3
+SELECT * FROM books
+    ORDER BY book_id DESC;
+
+--4
+        SELECT
+        book_title,
+        book_author
+    FROM books
+        ORDER BY book_title ASC;
+
+--5
+    SELECT
+    book_title,
+    book_author
+FROM books
+    ORDER BY book_title DESC;
+
+--6
+    SELECT 
+    book_author,
+    book_title
+FROM books
+    ORDER BY book_author ASC;
+
+--7
+    SELECT 
+    book_title,
+    book_author
+FROM books
+    ORDER BY book_author DESC;
+
+--8
+        SELECT 
+        book_title,
+        book_author
+    FROM books
+        WHERE book_id = 1
+        LIMIT 1;
+
+--9
+UPDATE books
+    SET book_title = 'The Book Thief',
+        book_author = 'Markus Zusak'
+    WHERE book_id = 1;
