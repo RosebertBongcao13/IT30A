@@ -31,11 +31,11 @@ DROP TABLE IF EXISTS `students`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `students` (
-  `student_id` int(11) NOT NULL AUTO_INCREMENT,
-  `student_first_name` varchar(50) NOT NULL,
-  `student_last_name` varchar(50) NOT NULL,
-  `student_course` varchar(50) NOT NULL,
-  `stduent_created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  student_id int(11) NOT NULL AUTO_INCREMENT,
+  student_first_name varchar(50) NOT NULL,
+  student_last_name varchar(50) NOT NULL,
+  student_course varchar(50) NOT NULL,
+  student_created_at timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`student_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
