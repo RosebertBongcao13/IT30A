@@ -100,4 +100,5 @@ INSERT INTO books
 -- BORROW
 
 INSERT INTO borrow (student_id,book_id) VALUES
-(1,2);
+(1,2);    
+
