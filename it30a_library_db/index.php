@@ -2,7 +2,7 @@
 
 //Database Connection
 $host = 'localhost';
-$db = 'it30a_lab_db';
+$db = 'it30a_library_db';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
