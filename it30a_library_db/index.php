@@ -513,7 +513,7 @@ if($section === 'borrow'){
 
         <?php else: ?>   
 
-            <table>
+            <table border="1" cellpadding="9" cellspacing="0">
                 <thead>
                      <tr>
                     <th>ID</th>
@@ -780,13 +780,14 @@ if($section === 'borrow'){
 
             <h3>Borrowed Books</h3>
 
-            <table>
+            <table border="1" cellpadding="9" cellspacing="0">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Student</th>
                         <th>Book</th>
                         <th>Return Date</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -812,13 +813,24 @@ if($section === 'borrow'){
                             </td>
                             <td>
                                 <?php if($borrow['borrow_return_date'] === null): ?>
-                                     Returned
+                                     Not Returned
                                 <?php else: ?>
                                     <?=htmlspecialchars($borrow['borrow_return_date']) ?>
                                 
                                 <?php endif; ?>
                             </td>
                             <td>
+                                <?php if($borrow['borrow_return_date'] === null): ?>
+
+                                    Borrowed
+
+                                    <?php else: ?>
+
+                                    Returned
+
+                                    <?php endif; ?>
+                            </td>
+                            <td>   
                                 <?php if($borrow['borrow_return_date'] === null): ?>
                                     <a href="index.php?section=borrow&action=return&id=<?= $borrow['borrow_id'] ?>"
                                        onclick="return confirm('Mark this book returned?')">
