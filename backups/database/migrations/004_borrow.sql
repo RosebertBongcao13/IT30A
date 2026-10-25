@@ -70,4 +70,4 @@
 
             ORDER BY br.borrow_date DESC;
 
-            --commit
+            --committ

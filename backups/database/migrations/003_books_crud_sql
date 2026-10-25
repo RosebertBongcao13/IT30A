@@ -51,5 +51,5 @@ UPDATE books
         book_author = 'Markus Zusak'
     WHERE book_id = 1;
 
-    -- commit
+    -- committ
     

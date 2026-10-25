@@ -52,4 +52,4 @@
         WHERE student_id = 1;
 
 
-    -- commit
+    -- committ
