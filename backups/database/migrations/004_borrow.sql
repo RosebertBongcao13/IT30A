@@ -1,73 +1,72 @@
-        SELECT
-            br.borrow_id,
 
-            --Student name
-            CONCAT(
-                s.student_first_name,
-                ' ',
-                s.student_last_name
-            ) AS student_name,
+SELECT
+    br.borrow_id,
 
-            -- Books 
-            b.book_title,
-            b.book_author,
-            b.book_category,
+    -- Student name
+    CONCAT(
+        s.student_first_name,
+        ' ',
+        s.student_last_name
+    ) AS student_name,
 
+    -- Books 
+    b.book_title,
+    b.book_author,
+    b.book_category,
 
-            -- Borrow date
+    -- Borrow date
+    br.borrow_date
 
-            br.borrow_date,
+FROM borrow br
 
-        FROM borrow br
+INNER JOIN students s
+ON br.student_id = s.student_id
 
-        INNER JOIN students s
-        ON br.student_id = s.student_id
+INNER JOIN books b 
+ON br.book_id = b.book_id
 
-        INNER JOIN books b 
-        ON br.book_id = b.book_id
+WHERE br.borrow_return_date IS NULL
 
-        WHERE br.borrow_return_date IS NULL
-
-        ORDER BY borrow_date DESC;
-
-        -- Return a book
-
-        UPDATE borrow
-        SET borrow_return_date = CURRENT_TIMESTAMP
-        WHERE borrow_id = 1
-        AND borrow_return_date IS NULL;
-
-        --View returned books
-
-            SELECT
-                br.borrow_id,
-
-                
-                CONCAT(
-                    s.student_first_name,
-                    ' ',
-                    s.student_last_name
-                ) AS student_name,
-
-                -- Books 
-                b.book_title,
-                b.book_author,
-                b.book_category,
+ORDER BY borrow_date DESC;
 
 
-                br.borrow_date,
-                br.borrow_return_date
+-- Return a book
 
-            FROM borrow br
+UPDATE borrow
+SET borrow_return_date = CURRENT_TIMESTAMP
+WHERE borrow_id = 1
+AND borrow_return_date IS NULL;
 
-            INNER JOIN students s
-            ON br.student_id = s.student_id
 
-            INNER JOIN books b 
-            ON br.book_id = b.book_id
+-- View returned books
 
-            WHERE br.borrow_return_date IS NULL
+SELECT
+    br.borrow_id,
 
-            ORDER BY br.borrow_date DESC;
+    CONCAT(
+        s.student_first_name,
+        ' ',
+        s.student_last_name
+    ) AS student_name,
 
-            --commit
+    -- Books 
+    b.book_title,
+    b.book_author,
+    b.book_category,
+
+    br.borrow_date,
+    br.borrow_return_date
+
+FROM borrow br
+
+INNER JOIN students s
+ON br.student_id = s.student_id
+
+INNER JOIN books b 
+ON br.book_id = b.book_id
+
+WHERE br.borrow_return_date IS NOT NULL
+
+ORDER BY br.borrow_date DESC;
+
+

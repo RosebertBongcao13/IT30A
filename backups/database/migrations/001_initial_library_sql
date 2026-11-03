@@ -28,7 +28,7 @@ book_id INT NOT NULL,
 borrow_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 borrow_return_date TIMESTAMP NULL DEFAULT NULL,
 
-```
+
 CONSTRAINT fk_borrow_student
     FOREIGN KEY (student_id)
     REFERENCES students(student_id)
@@ -40,7 +40,7 @@ CONSTRAINT fk_borrow_book
     REFERENCES books(book_id)
     ON UPDATE CASCADE
     ON DELETE RESTRICT
-```
+
 
 ) ENGINE=InnoDB
 DEFAULT CHARSET=utf8mb4
