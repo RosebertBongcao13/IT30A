@@ -513,7 +513,7 @@ if($section === 'borrow'){
 
         <?php else: ?>   
 
-            <table border="1" cellpadding="9" cellspacing="0">
+            <table border="1" cellpadding="10" cellspacing="0">
                 <thead>
                      <tr>
                     <th>ID</th>
@@ -662,7 +662,7 @@ if($section === 'borrow'){
 
     <?php else : ?>
     
-        <table>
+        <table border="1" cellpadding="10" cellspacing="0">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -780,7 +780,7 @@ if($section === 'borrow'){
 
             <h3>Borrowed Books</h3>
 
-            <table border="1" cellpadding="9" cellspacing="0">
+            <table border="1" cellpadding="10" cellspacing="0">
                 <thead>
                     <tr>
                         <th>ID</th>
