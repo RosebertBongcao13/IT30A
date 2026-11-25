@@ -66,7 +66,7 @@ for ($i = 6; $i >= 0; $i--) {
 
     $dayLabels[] = date('D', strtotime($date));
     $dailyBorrows[] = $borrowByDay[$date] ?? 0;
-}
+}   
 // ---------- 4. RECENT BORROWS ----------
 
 $recentStmt = $pdo->query("
