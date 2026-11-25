@@ -410,7 +410,7 @@ if($section==='borrow' && $action==='return'){
                            name="student_last_name"
                            required
                     />
-                </p>
+                </p>   
                 
                 <p>
                     <label>Course</label>
